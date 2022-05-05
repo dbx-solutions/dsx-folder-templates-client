@@ -3,11 +3,13 @@ import styles from "./main.module.css";
 export default function Main() {
    return (
     <>
-      <h1 className={styles.tagline}>
-        DSX Folder Templates
-      </h1>
+      <div className={styles.taglineContainer}>
+        <h1 className={styles.tagline}>
+          DSX Folder Templates
+        </h1>
+      </div>
 
-      <div className={styles.controls}>
+      <div className={styles.controlsContainer}>
         <button className={styles.button} onClick={connectToDropbox}>Connect</button>
         <button className={styles.button} onClick={createFromTemplate}>Create from template</button>
       </div>
