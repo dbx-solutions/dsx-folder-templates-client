@@ -38,3 +38,24 @@
   cursor: pointer;
   background-color: #2971fe;
 }
+
+.input {
+  position: relative;
+  width: 19vw;
+  height: 5vh;
+  padding-left: 1vw;
+  border: 2px solid grey;
+  border-radius: 0.5em;
+  font-size: 2em;
+}
+.input:hover {
+  border: 2px solid #2971fe;
+}
+
+.horizontalLine {
+  position: relative;
+  width: 10vw;
+  height: 1px;
+  margin: 2em 0;
+  background-color: #0156fe;
+}
