@@ -24,6 +24,32 @@
   row-gap: 2em;
 }
 
+.selectContainer {
+  position: relative;
+  width: 19vw;
+  height: 5vh;
+  border: 2px solid grey;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+}
+
+.select__control {
+  background-color: red;
+}
+
+.input {
+  position: relative;
+  width: 18vw;
+  height: 4vh;
+  padding-left: 1vw;
+  border: 2px solid grey;
+  border-radius: 0.5em;
+  font-size: 1.5em;
+}
+.input:hover {
+  border: 2px solid #2971fe;
+}
+
 .button {
   position: relative;
   width: 20vw;
@@ -31,25 +57,12 @@
   background-color: #0156fe;
   border: none;
   border-radius: 0.5em;
-  font-size: 2em;
+  font-size: 1.5em;
   color: #f6f3f0;
 }
 .button:hover {
   cursor: pointer;
   background-color: #2971fe;
-}
-
-.input {
-  position: relative;
-  width: 19vw;
-  height: 5vh;
-  padding-left: 1vw;
-  border: 2px solid grey;
-  border-radius: 0.5em;
-  font-size: 2em;
-}
-.input:hover {
-  border: 2px solid #2971fe;
 }
 
 .horizontalLine {
