@@ -12,27 +12,27 @@ export default function Main() {
   }, []);
 
   function connectToDropbox() {
-    fetch("/authurl")
+    fetch("/auth/url")
     .then((res) => res.json())
-    .then((authUrl) => window.location.replace(authUrl.url))
-  }
-  
-  function createFromTemplate() {
-    fetch("/template?" + new URLSearchParams({
-      rootName: folderName,
-      templateName: selectedTemplate,
-    }))
-    .then(() => window.location.replace("/"))
+    .then((data) => window.location.replace(data.authUrl))
   }
 
   function prepareTemplateNameItems() {
-    fetch("/template-list")
+    fetch("/templates")
     .then((res) => res.json())
-    .then((data) => setTemplates(data.templates))
+    .then((data) => setTemplates(data.templateList))
   }
 
   function getSelectedTemplate(e) {
     setSelectedTemplate(e.value)
+  }
+
+  function createFromTemplate() {
+    fetch("/structures?" + new URLSearchParams({
+      rootName: folderName,
+      templateName: selectedTemplate,
+    }))
+    .then(() => window.location.replace("/"))
   }
 
   const customStyles = {
@@ -50,7 +50,7 @@ export default function Main() {
     <>
       <div className={styles.taglineContainer}>
         <h1 className={styles.tagline}>
-          DSX Folder Templates
+          DSX - Folder Templates
         </h1>
       </div>
 
@@ -59,8 +59,8 @@ export default function Main() {
 
         <div className={styles.horizontalLine} />
 
-        <Select 
-          options={templates} 
+        <Select
+          options={templates}
           styles={customStyles}
           className={styles.selectContainer}
           isClearable={false}
@@ -68,10 +68,10 @@ export default function Main() {
           classNamePrefix="select"
         />
 
-        <input 
-          className={styles.input} 
+        <input
+          className={styles.input}
           placeholder="Enter root folder name"
-          value={folderName} 
+          value={folderName}
           onChange={e => setFolderName(e.target.value)}
         />
 

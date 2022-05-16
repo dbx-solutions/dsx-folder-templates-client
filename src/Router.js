@@ -7,7 +7,7 @@ export default function Router() {
   return (
     <Routes>
       <Route path="/" element={<Main />} />
-      <Route path="auth" element={<Auth />} />
+      <Route path="/auth/token" element={<Auth />} />
     </Routes>
   )
 }

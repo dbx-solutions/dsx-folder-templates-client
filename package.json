@@ -1,8 +1,7 @@
 {
   "name": "dsx-folder-templates-client",
   "version": "0.0.1",
-  "type": "module",
-  "description": "A use case of the Dropbox Solutions Accelerators project. This solution creates folder structures from pre-defined templates. This is the frontend app.",
+  "description": "A use case of the Dropbox Solutions Accelerators. This solution creates folder structures from pre-defined templates. This is the frontend app.",
   "keywords": [
     "dropbox",
     "accelerators",
@@ -16,7 +15,6 @@
     "type": "git",
     "url": "https://github.com/dbx-solutions/dsx-folder-templates-client.git"
   },
-  "homepage": "https://github.com/dbx-solutions/dsx-folder-templates-client#readme",
   "bugs": {
     "url": "https://github.com/dbx-solutions/dsx-folder-templates-client/issues"
   },
@@ -27,7 +25,6 @@
   "engines": {
     "node": ">=0.10.3"
   },
-  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
