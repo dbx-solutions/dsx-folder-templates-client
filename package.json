@@ -1,7 +1,33 @@
 {
-  "name": "folder-templates-client",
-  "version": "0.1.0",
-  "private": true,
+  "name": "dsx-folder-templates-client",
+  "version": "0.0.1",
+  "type": "module",
+  "description": "A use case of the Dropbox Solutions Accelerators project. This solution creates folder structures from pre-defined templates. This is the frontend app.",
+  "keywords": [
+    "dropbox",
+    "accelerators",
+    "dsx",
+    "folder template",
+    "folder structure",
+    "frontend"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dbx-solutions/dsx-folder-templates-client.git"
+  },
+  "homepage": "https://github.com/dbx-solutions/dsx-folder-templates-client#readme",
+  "bugs": {
+    "url": "https://github.com/dbx-solutions/dsx-folder-templates-client/issues"
+  },
+  "author": "Dropbox Solutions Team",
+  "contributors": [
+    "Hussam Hebbo <hussam@dropbox.com>"
+  ],
+  "engines": {
+    "node": ">=0.10.3"
+  },
+  "main": "main.js",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.2.0",
@@ -12,12 +38,6 @@
     "react-scripts": "5.0.1",
     "react-select": "^5.3.1",
     "web-vitals": "^2.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "proxy": "http://localhost:8080",
   "eslintConfig": {
@@ -37,5 +57,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   }
 }
