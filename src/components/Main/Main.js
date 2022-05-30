@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import Select from 'react-select';
 import styles from './main.module.css';
 
 export default function Main() {
@@ -20,11 +19,15 @@ export default function Main() {
 	function prepareTemplateNameItems() {
 		fetch('/templates')
 			.then((res) => res.json())
-			.then((data) => setTemplates(data.templateList));
+			.then((data) => {
+				const templateList = data.templateList;
+				setTemplates(templateList);
+				setSelectedTemplate(templateList[0].value);
+			});
 	}
 
 	function getSelectedTemplate(e) {
-		setSelectedTemplate(e.value);
+		setSelectedTemplate(e.target.value);
 	}
 
 	function createFromTemplate() {
@@ -36,17 +39,6 @@ export default function Main() {
 				})
 		).then(() => window.location.replace('/'));
 	}
-
-	const customStyles = {
-		control: (provided, state) => ({
-			...provided,
-			width: '100%',
-			height: '5vh',
-			border: 'none',
-			borderRadius: '0.5em',
-			backgroundColor: 'transparent',
-		}),
-	};
 
 	return (
 		<>
@@ -61,14 +53,17 @@ export default function Main() {
 
 				<div className={styles.horizontalLine} />
 
-				<Select
-					options={templates}
-					styles={customStyles}
-					className={styles.selectContainer}
-					isClearable={false}
-					onChange={getSelectedTemplate}
-					classNamePrefix="select"
-				/>
+				<div className={styles.select}>
+					<select value={selectedTemplate} onChange={getSelectedTemplate}>
+						{templates.map((template, index) => {
+							return (
+								<option value={template.value} key={index}>
+									{template.label}
+								</option>
+							);
+						})}
+					</select>
+				</div>
 
 				<input
 					className={styles.input}

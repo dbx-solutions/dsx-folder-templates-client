@@ -24,27 +24,61 @@
 	row-gap: 2em;
 }
 
-.selectContainer {
-	position: relative;
-	width: 19vw;
-	height: 5vh;
-	border: 2px solid grey;
+select {
+	width: 100%;
+	height: 100%;
+	appearance: none;
+	background-color: transparent;
+	border: none;
+	padding-left: 1em;
+	margin: 0;
+	outline: none;
+	font-family: inherit;
+	font-size: inherit;
+	cursor: inherit;
+	line-height: inherit;
+}
+.select {
+	display: grid;
+	width: 15em;
+	height: 2em;
+	border: 2px solid gray;
 	border-radius: 0.5em;
 	font-size: 1.5em;
+	cursor: pointer;
+	align-items: center;
+	grid-template-areas: 'select';
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
-
-.select__control {
-	background-color: red;
+.select::after {
+	content: '';
+	width: 0.8em;
+	height: 0.5em;
+	margin-left: 90%;
+	background-color: gray;
+	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+}
+select,
+.select:after {
+	grid-area: select;
+}
+.select:hover {
+	cursor: pointer;
+	border: 2px solid #2971fe;
 }
 
 .input {
 	position: relative;
-	width: 18vw;
-	height: 4vh;
-	padding-left: 1vw;
+	width: 15em;
+	height: 2em;
+	padding-left: 1em;
 	border: 2px solid grey;
 	border-radius: 0.5em;
 	font-size: 1.5em;
+	color: #333333;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .input:hover {
 	border: 2px solid #2971fe;
@@ -52,13 +86,15 @@
 
 .button {
 	position: relative;
-	width: 20vw;
-	height: 5vh;
+	width: 15em;
+	height: 2em;
 	background-color: #0156fe;
-	border: none;
+	border: 2px solid transparent;
 	border-radius: 0.5em;
 	font-size: 1.5em;
 	color: #f6f3f0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
 }
 .button:hover {
 	cursor: pointer;
