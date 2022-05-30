@@ -1,0 +1,16 @@
+.button {
+	position: relative;
+	width: 15em;
+	height: 2em;
+	background-color: #0156fe;
+	border: 2px solid transparent;
+	border-radius: 0.5em;
+	font-size: 1.5em;
+	color: #f6f3f0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+.button:hover {
+	cursor: pointer;
+	background-color: #2971fe;
+}

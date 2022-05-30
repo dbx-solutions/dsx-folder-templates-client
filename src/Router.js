@@ -1,13 +1,13 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Main from './components/Main/Main';
-import Auth from './components/Auth/Auth';
+import AuthToken from './components/Auth/AuthToken';
 
 export default function Router() {
 	return (
 		<Routes>
 			<Route path="/" element={<Main />} />
-			<Route path="/auth/token" element={<Auth />} />
+			<Route path="/auth/token" element={<AuthToken />} />
 		</Routes>
 	);
 }
