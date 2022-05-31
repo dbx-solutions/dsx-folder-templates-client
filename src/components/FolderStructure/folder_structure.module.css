@@ -9,6 +9,7 @@ select {
 	outline: none;
 	font-family: inherit;
 	font-size: inherit;
+	color: var(--color-text-light);
 	cursor: inherit;
 	line-height: inherit;
 }
@@ -16,7 +17,7 @@ select {
 	display: grid;
 	width: 15em;
 	height: 2em;
-	border: 2px solid gray;
+	border: 2px solid var(--color-border);
 	border-radius: 0.5em;
 	font-size: 1.5em;
 	cursor: pointer;
@@ -30,12 +31,12 @@ select {
 	width: 0.8em;
 	height: 0.5em;
 	margin-left: 90%;
-	background-color: gray;
+	background-color: var(--color-border);
 	clip-path: polygon(100% 0%, 0 0%, 50% 100%);
 }
 .select:hover {
 	cursor: pointer;
-	border: 2px solid #2971fe;
+	border: 2px solid var(--color-dbx-blue-dark);
 }
 
 select,
@@ -48,13 +49,14 @@ select,
 	width: 15em;
 	height: 2em;
 	padding-left: 1em;
-	border: 2px solid grey;
+	border: 2px solid var(--color-border);
 	border-radius: 0.5em;
+	background-color: transparent;
 	font-size: 1.5em;
-	color: #333333;
+	color: var(--color-text-light);
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
 .input:hover {
-	border: 2px solid #2971fe;
+	border: 2px solid var(--color-dbx-blue-dark);
 }

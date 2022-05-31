@@ -1,6 +1,7 @@
 import React from 'react';
 import ApiRoutes from '../../ApiRoutes';
 import Button from '../Elements/Button/Button';
+import Icon from '../Elements/Icon';
 
 export default function OAuth() {
 	function connectToDropbox() {
@@ -11,8 +12,10 @@ export default function OAuth() {
 
 	return (
 		<Button
+			icon={Icon.link}
 			caption="Connect your Dropbox Team"
 			handleOnClick={connectToDropbox}
+			color="gray"
 		/>
 	);
 }

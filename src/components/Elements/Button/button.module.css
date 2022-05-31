@@ -1,16 +1,37 @@
 .button {
-	position: relative;
-	width: 15em;
+	display: flex;
+	padding: 0 1em;
 	height: 2em;
-	background-color: #0156fe;
-	border: 2px solid transparent;
-	border-radius: 0.5em;
-	font-size: 1.5em;
-	color: #f6f3f0;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	font-size: 1em;
+	color: var(--color-text-light);
 	box-sizing: border-box;
 	-moz-box-sizing: border-box;
 }
 .button:hover {
 	cursor: pointer;
-	background-color: #2971fe;
+}
+
+.blue {
+	background-color: var(--color-dbx-blue-dark);
+}
+.blue:hover {
+	background-color: var(--color-dbx-blue-light);
+}
+
+.gray {
+	background-color: var(--color-dbx-gray-dark);
+}
+.gray:hover {
+	background-color: var(--color-dbx-gray-light);
+}
+
+.icon {
+	display: block;
+	width: 1em;
+	height: 1em;
+	margin-right: 0.5em;
+	fill: var(--color-text-light);
 }

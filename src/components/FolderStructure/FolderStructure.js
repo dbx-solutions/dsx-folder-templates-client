@@ -1,7 +1,9 @@
 import { useEffect, useState } from 'react';
+import Layout from '../Layout/Layout';
 import ApiRoutes from '../../ApiRoutes';
 import Button from '../Elements/Button/Button';
 import styles from './folder_structure.module.css';
+import Icon from '../Elements/Icon';
 
 export default function FolderStructure() {
 	const [templates, setTemplates] = useState([]);
@@ -34,7 +36,7 @@ export default function FolderStructure() {
 	}
 
 	return (
-		<>
+		<Layout>
 			<div className={styles.select}>
 				<select onChange={(e) => setTemplate(e.target.value)}>
 					{templates.map((template, index) => {
@@ -55,9 +57,10 @@ export default function FolderStructure() {
 			/>
 
 			<Button
+				icon={Icon.plus}
 				caption="Create from template"
 				handleOnClick={createFromTemplate}
 			/>
-		</>
+		</Layout>
 	);
 }
