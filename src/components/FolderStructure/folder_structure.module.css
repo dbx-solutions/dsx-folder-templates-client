@@ -1,3 +1,68 @@
+.leftSide {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+	align-items: center;
+	justify-content: center;
+
+	/* background-color: brown; */
+}
+
+.rightSide {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+	height: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.verticalDivider {
+	height: 80%;
+	margin-top: 5%;
+	border-right: 1px solid var(--color-border);
+}
+
+.art {
+	display: flex;
+	column-gap: 2em;
+}
+
+.artItem {
+	width: 15em;
+	height: 15em;
+	fill: var(--color-text-dark);
+}
+
+.artTagline {
+	margin-top: 2em;
+	font-size: 2em;
+	color: var(--color-text-light);
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+}
+
+.control {
+	margin-bottom: 2em;
+}
+
+.formTagline {
+	margin-bottom: 2em;
+	font-size: 2em;
+	color: var(--color-text-light);
+}
+
+.formLabel {
+	display: block;
+	font-size: 1.5em;
+	margin-bottom: 0.5em;
+	color: var(--color-text-light);
+}
+
 select {
 	width: 100%;
 	height: 100%;
@@ -18,7 +83,6 @@ select {
 	width: 15em;
 	height: 2em;
 	border: 2px solid var(--color-border);
-	border-radius: 0.5em;
 	font-size: 1.5em;
 	cursor: pointer;
 	align-items: center;
@@ -50,7 +114,7 @@ select,
 	height: 2em;
 	padding-left: 1em;
 	border: 2px solid var(--color-border);
-	border-radius: 0.5em;
+
 	background-color: transparent;
 	font-size: 1.5em;
 	color: var(--color-text-light);
@@ -59,4 +123,9 @@ select,
 }
 .input:hover {
 	border: 2px solid var(--color-dbx-blue-dark);
+}
+
+.buttonContainer {
+	width: 15em;
+	height: 2em;
 }

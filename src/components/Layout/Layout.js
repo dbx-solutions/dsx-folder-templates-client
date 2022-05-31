@@ -15,16 +15,7 @@ export default function Layout(props) {
 				<ToolsBar />
 			</div>
 
-			<div className={styles.contentContainer}>
-				<div className={styles.contentLeftSide}>
-					<span className={styles.artText}>
-						Create folder structures in seconds
-					</span>
-					<div className={styles.art}>{Icon.folder}</div>
-				</div>
-
-				<div className={styles.contentRightSide}>{props.children}</div>
-			</div>
+			<div className={styles.contentContainer}>{props.children}</div>
 		</>
 	);
 }
