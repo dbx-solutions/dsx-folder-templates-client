@@ -37,7 +37,9 @@
 
 .artTagline {
 	margin-top: 2em;
+	padding: 2em;
 	font-size: 2em;
+	text-align: center;
 	color: var(--color-text-light);
 }
 

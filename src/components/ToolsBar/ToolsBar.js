@@ -29,18 +29,8 @@ export default function ToolsBar() {
 					color="blue"
 					handleOnClick={handleCreateProject}
 				/>
-				<Button
-					icon={Icon.plus}
-					caption="Create template"
-					color="gray"
-					handleOnClick={handleCreateTemplate}
-				/>
-				<Button
-					icon={Icon.template}
-					caption="View all templates"
-					color="gray"
-					handleOnClick={handleViewTemplates}
-				/>
+				<Button icon={Icon.plus} caption="Create template" color="gray" handleOnClick={handleCreateTemplate} />
+				<Button icon={Icon.template} caption="View templates" color="gray" handleOnClick={handleViewTemplates} />
 			</div>
 		</>
 	);

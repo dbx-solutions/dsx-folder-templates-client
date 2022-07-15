@@ -1,5 +1,4 @@
 import { React } from 'react';
-import Icon from '../Elements/Icon';
 import Nav from '../Nav/Nav';
 import ToolsBar from '../ToolsBar/ToolsBar';
 import styles from './layout.module.css';

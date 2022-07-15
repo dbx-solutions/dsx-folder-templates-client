@@ -10,12 +10,5 @@ export default function OAuth() {
 			.then((data) => window.location.replace(data.authUrl));
 	}
 
-	return (
-		<Button
-			icon={Icon.link}
-			caption="Connect your Dropbox Team"
-			handleOnClick={connectToDropbox}
-			color="gray"
-		/>
-	);
+	return <Button icon={Icon.link} caption="Sign in with Dropbox" handleOnClick={connectToDropbox} color="gray" />;
 }
